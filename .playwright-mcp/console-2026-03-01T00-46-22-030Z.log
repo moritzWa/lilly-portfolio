@@ -1,0 +1,7 @@
+[    6849ms] [WARNING] [DEPRECATED] atomFamily is deprecated and will be removed in v3. Please use the `jotai-family` package instead: https://github.com/jotaijs/jotai-family @ http://localhost:3000/_next/static/chunks/node_modules__bun_a39c48d2._.js:28316
+[    6915ms] [WARNING] [HMR] Invalid message: {"action":"isrManifest","data":{}}
+TypeError: Cannot read properties of undefined (reading 'components')
+    at handleStaticIndicator (http://localhost:3000/_next/static/chunks/c5d0a_next_dist_client_447050c8._.js:2733:46)
+    at processMessage (http://localhost:3000/_next/static/chunks/c5d0a_next_dist_client_447050c8._.js:2750:17)
+    at http://localhost:3000/_next/static/chunks/c5d0a_next_dist_client_447050c8._.js:2619:13
+    at WebSocket.handleMessage (http://localhost:3000/_next/static/chunks/c5d0a_next_dist_client_447050c8._.js:2231:17) @ http://localhost:3000/_next/static/chunks/c5d0a_next_dist_client_447050c8._.js:2297

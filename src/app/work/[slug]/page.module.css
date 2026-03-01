@@ -1,0 +1,221 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 0;
+  font-size: 14px;
+  font-variation-settings: var(--font-weight-450);
+  color: var(--text-quaternary);
+  list-style: none;
+}
+
+.breadcrumb a {
+  color: var(--text-quaternary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--text-secondary);
+}
+
+.breadcrumb span {
+  color: var(--text-primary);
+  font-variation-settings: var(--font-weight-500);
+}
+
+.separator {
+  color: var(--text-quaternary);
+  display: flex;
+  align-items: center;
+}
+
+.article {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+.article * {
+  position: relative;
+  font-size: 14px;
+  font-variation-settings: var(--font-weight-450);
+  color: var(--text-primary);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 12px;
+}
+
+.header h1 {
+  font-variation-settings: var(--font-weight-500);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.header time {
+  font-variation-settings: var(--font-weight-500);
+  color: var(--text-quaternary);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.content h1 {
+  margin-top: 24px;
+  font-variation-settings: var(--font-weight-500);
+  color: var(--text-primary);
+  line-height: 24px;
+}
+
+.content h1:first-child {
+  margin-top: 0;
+}
+
+.content h2 {
+  margin-top: 24px;
+  font-variation-settings: var(--font-weight-500);
+  color: var(--text-primary);
+  line-height: 24px;
+}
+
+.content h3 {
+  margin-top: 24px;
+  font-variation-settings: var(--font-weight-500);
+  color: var(--text-primary);
+  line-height: 24px;
+}
+
+.content p {
+  color: var(--text-secondary);
+  line-height: 24px;
+  margin-top: 12px;
+}
+
+.content a {
+  color: var(--text-quaternary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentcolor 20%, transparent);
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.content a:hover {
+  color: var(--text-secondary);
+}
+
+.content hr {
+  margin: 12px 0 24px;
+  border: none;
+  border-top: 1px solid var(--border-primary);
+}
+
+.content img {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary);
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageGrid img {
+  margin-top: 0;
+}
+
+.imageRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .imageRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imageRow img {
+  margin-top: 0;
+}
+
+.details {
+  margin-top: 24px;
+}
+
+.details summary {
+  cursor: pointer;
+  font-variation-settings: var(--font-weight-500);
+  color: var(--text-primary);
+  padding: 8px 0;
+  user-select: none;
+}
+
+.details summary:hover {
+  color: var(--text-secondary);
+}
+
+.detailsContent {
+  padding: 12px 0 12px 16px;
+  border-left: 2px dashed var(--border-primary);
+}
+
+.detailsContent p {
+  color: var(--text-tertiary);
+}
+
+.detailsContent img {
+  margin-top: 16px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 48px;
+  color: var(--text-quaternary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentcolor 20%, transparent);
+  text-underline-offset: 2px;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--text-secondary);
+}
+
+.externalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  color: var(--text-quaternary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentcolor 20%, transparent);
+  text-underline-offset: 2px;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.externalLink:hover {
+  color: var(--text-secondary);
+}
