@@ -516,29 +516,14 @@ export const projects: Project[] = [
       },
       { type: "hr" },
       {
-        type: "image-row",
+        type: "image-grid",
         images: [
           { src: "/images/work/art/acryl-canvas.png", alt: "Acryl on canvas" },
           { src: "/images/work/art/pen-drawing.png", alt: "Pen drawing" },
-        ],
-      },
-      {
-        type: "image-row",
-        images: [
           { src: "/images/work/art/pen.jpg", alt: "Pen" },
           { src: "/images/work/art/watercolour.png", alt: "Watercolour" },
-        ],
-      },
-      {
-        type: "image-row",
-        images: [
           { src: "/images/work/art/oil-canvas.jpg", alt: "Oil on canvas" },
           { src: "/images/work/art/linolprint.jpg", alt: "Linolprint" },
-        ],
-      },
-      {
-        type: "image-row",
-        images: [
           { src: "/images/work/art/watercolour-pen.png", alt: "Watercolour and pen" },
           { src: "/images/work/art/acryl.png", alt: "Acryl" },
         ],

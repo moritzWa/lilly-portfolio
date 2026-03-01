@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import { projects as projectData } from '@/data/projects';
+import EmailLink from '@/components/EmailLink';
 
 const thumbnails = [
   {
@@ -44,32 +45,33 @@ export default function Home() {
           <div className={styles.about}>
             <h1>Lilly Wallawitsch</h1>
             <p>
-              Hey I&apos;m Lilly, a UX/UI Designer studying Interaction Design{' '}
+              Hey I&apos;m Lilly, a UX/UI Designer studying Interaction Design
+              at{' '}
               <a
                 href="https://code.berlin/en/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @CODE
+                CODE University
               </a>
-              . Currently working{' '}
+              . Currently working at{' '}
               <a
                 href="https://www.glsnxt.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @GLS/NXT
+                GLS/NXT
               </a>
               .
             </p>
             <p>
-              Female in Tech Scholarship holder{' '}
+              Female in Tech Scholarship holder at{' '}
               <a
                 href="https://www.t-mobile.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @T-Mobile
+                T-Mobile
               </a>
               . Previously designed for{' '}
               <a
@@ -90,7 +92,7 @@ export default function Home() {
               .
             </p>
             <p>
-              You can reach out to me on{' '}
+              Reach me on{' '}
               <a
                 href="https://x.com/WallawitschL"
                 target="_blank"
@@ -106,7 +108,7 @@ export default function Home() {
               >
                 LinkedIn
               </a>
-              , or see more on{' '}
+              ,{' '}
               <a
                 href="https://github.com/lillywallawitsch"
                 target="_blank"
@@ -114,9 +116,9 @@ export default function Home() {
               >
                 GitHub
               </a>
-              .
-            </p>
-            <div className={styles.links}>
+              , or via{' '}
+              <EmailLink />
+              . Download my{' '}
               <a
                 href="https://drive.google.com/file/d/1InsBV12tYTRTt2FCFzI9INUCzxS-c0Ri/view?usp=sharing"
                 target="_blank"
@@ -124,25 +126,25 @@ export default function Home() {
               >
                 CV
               </a>
-              <a href="mailto:lilly.wallawitsch@code.berlin">Email</a>
-            </div>
+              .
+            </p>
           </div>
           <div className={styles.profilePicture}>
             <Image
               src="/lilly-picture.jpg"
               alt="Lilly Wallawitsch"
-              width={200}
-              height={200}
+              width={600}
+              height={600}
             />
           </div>
         </div>
 
         <section className={styles.sections} id="work">
           <div className={styles.work}>
-            <div className={styles.sectionHeading}>
+            <Link href="/work" className={styles.sectionHeading}>
               <h1>Work</h1>
               <h2>{projectData.length}+</h2>
-            </div>
+            </Link>
             <div className={styles.eyebrow} />
             <div className={styles.grid}>
               {thumbnails.map((project) => (
@@ -156,7 +158,7 @@ export default function Home() {
                       src={project.thumbnail}
                       alt={project.title}
                       fill
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'contain' }}
                       sizes="(max-width: 800px) 100vw, 33vw"
                     />
                   </div>
@@ -167,26 +169,41 @@ export default function Home() {
 
           <div className={styles.posts}>
             <div className={styles.postsHeading}>
-              <h1>Selected Work</h1>
+              <h1>Library</h1>
             </div>
             <div className={styles.container}>
-              {projectData.map((item) => (
-                <Link
-                  key={item.slug}
-                  className={styles.row}
-                  href={`/work/${item.slug}`}
-                >
-                  <div className={styles.colA}>
-                    <div>
-                      <h3 className={styles.rowTitle}>{item.title}</h3>
-                    </div>
+              <div className={styles.rowDisabled}>
+                <div className={styles.colA}>
+                  <div>
+                    <h3 className={styles.rowTitle}>
+                      Understanding User Research Methods
+                    </h3>
                   </div>
-                  <div className={styles.colB}>{item.category}</div>
-                  <div className={styles.colC}>
-                    <time>{item.tags[0]}</time>
+                  <div className={styles.draft}>
+                    <p className={styles.draftLabel}>Draft</p>
                   </div>
-                </Link>
-              ))}
+                </div>
+                <div className={styles.colB}>Blog</div>
+                <div className={styles.colC}>
+                  <time>2025</time>
+                </div>
+              </div>
+              <div className={styles.rowDisabled}>
+                <div className={styles.colA}>
+                  <div>
+                    <h3 className={styles.rowTitle}>
+                      Design Systems in Practice
+                    </h3>
+                  </div>
+                  <div className={styles.draft}>
+                    <p className={styles.draftLabel}>Draft</p>
+                  </div>
+                </div>
+                <div className={styles.colB}>Blog</div>
+                <div className={styles.colC}>
+                  <time>2025</time>
+                </div>
+              </div>
             </div>
           </div>
         </section>

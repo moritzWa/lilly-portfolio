@@ -137,7 +137,7 @@ export default async function ProjectPage({
             </li>
             <ChevronSeparator />
             <li>
-              <Link href="/#work">Work</Link>
+              <Link href="/work">Work</Link>
             </li>
             <ChevronSeparator />
             <li>
