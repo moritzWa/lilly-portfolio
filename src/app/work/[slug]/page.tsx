@@ -63,6 +63,21 @@ function renderSection(section: ProjectSection, index: number) {
           style={{ width: "100%", height: "auto" }}
         />
       );
+    case "video":
+      return (
+        <figure key={index} className={styles.mediaBlock}>
+          <video
+            className={styles.mediaVideo}
+            controls
+            preload="metadata"
+            poster={section.poster}
+          >
+            <source src={section.src} />
+            Your browser does not support the video tag.
+          </video>
+          {section.alt && <figcaption>{section.alt}</figcaption>}
+        </figure>
+      );
     case "image-grid":
       return (
         <div key={index} className={styles.imageGrid}>
@@ -109,6 +124,42 @@ function renderSection(section: ProjectSection, index: number) {
             {section.content || "View PDF"}
           </a>
         </p>
+      );
+    case "pdf-embed":
+      return (
+        <figure key={index} className={styles.mediaBlock}>
+          <iframe
+            src={section.src}
+          title={section.alt || "PDF document"}
+            className={styles.pdfFrame}
+          />
+          {section.alt && <figcaption>{section.alt}</figcaption>}
+        </figure>
+      );
+    case "link-card":
+      return (
+        <a
+          key={index}
+          href={section.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.linkCard}
+        >
+          {section.iconSrc && (
+            <span className={styles.linkCardIcon}>
+              <Image src={section.iconSrc} alt="" width={24} height={24} />
+            </span>
+          )}
+          <span className={styles.linkCardBody}>
+            <span className={styles.linkCardTitle}>{section.title}</span>
+            {section.description && (
+              <span className={styles.linkCardDescription}>
+                {section.description}
+              </span>
+            )}
+            <span className={styles.linkCardUrl}>{section.url}</span>
+          </span>
+        </a>
       );
     default:
       return null;

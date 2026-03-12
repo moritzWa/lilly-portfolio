@@ -69,9 +69,11 @@ export default function WorkPage() {
                     href={`/work/${project.slug}`}
                   >
                     <div className={styles.thumbnail}>
-                      {project.sections.find((s) => s.type === "image")?.src ? (
+                      {(project as any).thumbnail ||
+                      project.sections.find((s) => s.type === "image")?.src ? (
                         <Image
                           src={
+                            ((project as any).thumbnail as string) ||
                             project.sections.find((s) => s.type === "image")!
                               .src!
                           }

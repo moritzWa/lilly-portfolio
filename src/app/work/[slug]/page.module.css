@@ -77,15 +77,17 @@
 
 .content h2 {
   margin-top: 24px;
-  font-variation-settings: var(--font-weight-500);
+  font-variation-settings: var(--font-weight-600);
   color: var(--text-primary);
+  font-size: 16px;
   line-height: 24px;
 }
 
 .content h3 {
   margin-top: 24px;
-  font-variation-settings: var(--font-weight-500);
+  font-variation-settings: var(--font-weight-600);
   color: var(--text-primary);
+  font-size: 15px;
   line-height: 24px;
 }
 
@@ -118,7 +120,88 @@
   width: 100%;
   margin-top: 24px;
   border-radius: 8px;
+  border: none;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.mediaBlock {
+  margin-top: 24px;
+}
+
+.mediaBlock figcaption {
+  margin-top: 8px;
+  color: var(--text-tertiary);
+}
+
+.mediaVideo {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
   border: 1px solid var(--border-primary);
+  background: #000;
+}
+
+.pdfFrame {
+  width: 96%;
+  min-height: 320px;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary);
+  background: white;
+  display: block;
+  margin: 0 auto;
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-primary);
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.linkCard:hover {
+  border-color: var(--border-secondary);
+  background: color-mix(in srgb, #ffffff 90%, transparent);
+  transform: translateY(-1px);
+}
+
+.linkCardIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--surface-primary) 60%, transparent);
+}
+
+.linkCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.linkCardTitle {
+  font-variation-settings: var(--font-weight-500);
+  color: var(--text-primary);
+}
+
+.linkCardDescription {
+  color: var(--text-secondary);
+}
+
+.linkCardUrl {
+  font-size: 12px;
+  color: var(--text-quaternary);
 }
 
 .imageGrid {
@@ -136,6 +219,10 @@
 
 .imageGrid img {
   margin-top: 0;
+  border: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .imageRow {
@@ -153,6 +240,14 @@
 
 .imageRow img {
   margin-top: 0;
+  border: none;
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+}
+
+.imageRow > :first-child img {
+  height: 170px;
 }
 
 .details {

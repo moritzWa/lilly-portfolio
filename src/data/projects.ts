@@ -1,13 +1,29 @@
 export interface ProjectSection {
-  type: "text" | "heading" | "image" | "image-grid" | "image-row" | "details" | "pdf-link" | "hr";
+  type:
+    | "text"
+    | "heading"
+    | "image"
+    | "image-grid"
+    | "image-row"
+    | "details"
+    | "pdf-link"
+    | "pdf-embed"
+    | "video"
+    | "hr"
+    | "link-card";
   content?: string;
   src?: string;
   alt?: string;
+  poster?: string;
   images?: { src: string; alt: string }[];
   level?: 1 | 2 | 3;
   href?: string;
   summary?: string;
   children?: ProjectSection[];
+  title?: string;
+  description?: string;
+  url?: string;
+  iconSrc?: string;
 }
 
 export interface Project {
@@ -16,6 +32,7 @@ export interface Project {
   category: string;
   tags: string[];
   link?: string;
+  thumbnail?: string;
   sections: ProjectSection[];
 }
 
@@ -265,6 +282,13 @@ export const projects: Project[] = [
           },
         ],
       },
+      { type: "heading", content: "Figma", level: 3 },
+      { type: "hr" },
+      {
+        type: "pdf-embed",
+        src: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FkRtqdrgFKvIzqByNachMMv%2FDashboard-Project%3Fnode-id%3D3-2%26t%3D2MZeJ2KFR3Ovtyj4-1",
+        alt: "Buena dashboard Figma file",
+      },
       { type: "heading", content: "Owners Meeting (ETV)", level: 3 },
       { type: "hr" },
       {
@@ -288,6 +312,28 @@ export const projects: Project[] = [
           },
         ],
       },
+      {
+        type: "video",
+        src: "/Screen_Recording_2025-02-18_at_14.20.26.mov",
+        alt: "Owners Meeting (ETV) flow screen recording",
+      },
+      {
+        type: "pdf-embed",
+        src: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FKxXvimZYiIgMVAiQtEl4Yy%2FSnail-Mail%3Fnode-id%3D1-5106%26t%3DH2eIB0vkVP7jvTxx-1",
+        alt: "Snail Mail Figma file",
+      },
+      {
+        type: "pdf-embed",
+        src: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fkikg6MnsrhbYAUm2xxiSUv%2FETV%3Fnode-id%3D1739-8263%26t%3DnDwvQxUWGs23jbhD-1",
+        alt: "ETV Figma file",
+      },
+      { type: "heading", content: "Graphic Design", level: 3 },
+      { type: "hr" },
+      {
+        type: "pdf-embed",
+        src: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Ftvwj9Eg2sIIZtOPjgjySni%2FLogo--Brand-Assests%3Fnode-id%3D554-2%26p%3Df%26t%3DLp6L8UPDxAXkXZhQ-0",
+        alt: "Logo & Brand Assets Figma file",
+      },
     ],
   },
   {
@@ -295,7 +341,7 @@ export const projects: Project[] = [
     title: "Wondernest - Web Development, Animation, Branding",
     category: "Brand & Development",
     tags: ["Brand", "Marketing", "Brand Book", "Logo Animation"],
-    link: "https://wondernest-express.onrender.com/",
+    link: "https://wondernest.net/",
     sections: [
       {
         type: "image",
@@ -304,6 +350,12 @@ export const projects: Project[] = [
       },
       { type: "heading", content: "Logo Animation", level: 3 },
       { type: "hr" },
+      {
+        type: "video",
+        src: "/Wondernest_Logo.mp4",
+        poster: "/images/work/wondernest/hero.png",
+        alt: "",
+      },
       {
         type: "text",
         content: "Logo animation with Adobe After Effects.",
@@ -326,6 +378,26 @@ export const projects: Project[] = [
         content:
           "I developed the Wondernest webpage entirely from scratch, using JavaScript, Node.js, and MongoDB as the database. Without relying on frameworks, I built and deployed the site on onrender.com, ensuring a fully custom, hard-coded solution adapted to the platform's needs. This approach allowed me to have complete control over the functionality and design, showcasing my ability to create robust web applications independently.",
       },
+      {
+        type: "pdf-embed",
+        src: "https://wondernest.net/",
+        alt: "Wondernest live website",
+      },
+      {
+        type: "link-card",
+        title: "Wondernest",
+        description:
+          "Host, organize, and attend small in-person events, which focus on genuine connections, enhancing social lives in big cities",
+        url: "https://wondernest.net/",
+        iconSrc: "/globe.svg",
+      },
+      { type: "heading", content: "Brand Book", level: 3 },
+      { type: "hr" },
+      {
+        type: "pdf-embed",
+        src: "https://www.canva.com/design/DAGD6NH4CFU/HoRAWwIsxg-x17QGnuCaUg/view?embed",
+        alt: "Wondernest Brand Book - Lilly Wallawitsch",
+      },
     ],
   },
   {
@@ -338,8 +410,8 @@ export const projects: Project[] = [
       { type: "heading", content: "Web Design", level: 1 },
       {
         type: "image",
-        src: "/images/work/cerasync/web-1.png",
-        alt: "CeraSync web design 1",
+        src: "/Cerasyn.png",
+        alt: "CeraSync landing page overview",
       },
       {
         type: "image",
@@ -424,8 +496,8 @@ export const projects: Project[] = [
       { type: "hr" },
       {
         type: "image",
-        src: "/images/work/meet/hero.png",
-        alt: "Meet app concept",
+        src: "/Meet wireframing.png",
+        alt: "Meet app wireframing screens",
       },
       {
         type: "text",
@@ -445,14 +517,16 @@ export const projects: Project[] = [
       { type: "heading", content: "Competitor Research and Process", level: 3 },
       { type: "hr" },
       {
-        type: "text",
-        content: "The full research and competitor analysis is available as a PDF document.",
+        type: "pdf-embed",
+        src: "/Meet.Lilly_Wallawitsch.pdf",
+        alt: "Meet – Competitor Research and Process",
       },
       { type: "heading", content: "Consumer Psychology adapted on Meet", level: 3 },
       { type: "hr" },
       {
-        type: "text",
-        content: "Consumer psychology research adapted for the Meet app is available as a PDF document.",
+        type: "pdf-embed",
+        src: "/PM_11 Cosumer Psychology-Lilly Wallawitsch.pdf",
+        alt: "Consumer Psychology adapted on Meet - PDF",
       },
     ],
   },
@@ -461,11 +535,12 @@ export const projects: Project[] = [
     title: "Pick Up - App Design",
     category: "App Design",
     tags: ["UI/UX", "Icon design", "Brand", "Marketing"],
+    thumbnail: "/Pick Up - App Design 0.png",
     sections: [
       {
         type: "image",
-        src: "/images/work/pickup/hero.png",
-        alt: "Pick Up hero",
+        src: "/Pick Up - App Design 0.png",
+        alt: "Pick Up app overview",
       },
       { type: "heading", content: "App Design", level: 2 },
       { type: "hr" },
@@ -483,15 +558,15 @@ export const projects: Project[] = [
       {
         type: "image-row",
         images: [
-          { src: "/images/work/pickup/logo-1.png", alt: "Pick Up logo 1" },
-          { src: "/images/work/pickup/logo-2.png", alt: "Pick Up logo 2" },
+          { src: "/pick up logo black logo.png", alt: "Pick Up black logo" },
+          { src: "/pick up logo black arrow.png", alt: "Pick Up black arrow icon" },
         ],
       },
       {
         type: "image-row",
         images: [
-          { src: "/images/work/pickup/logo-3.png", alt: "Pick Up logo 3" },
-          { src: "/images/work/pickup/logo-4.png", alt: "Pick Up logo 4" },
+          { src: "/pick up logo purple logo.png", alt: "Pick Up purple logo" },
+          { src: "/pick up logo purple arrow.png", alt: "Pick Up purple arrow icon" },
         ],
       },
       { type: "heading", content: "The Process", level: 3 },
@@ -501,6 +576,11 @@ export const projects: Project[] = [
         content:
           "The designs were done in the timespan of one week. I moved fast and neglected componizing as well as auto layout to create the first draft.",
       },
+      {
+        type: "pdf-embed",
+        src: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FDCVMfUCvkRXZTkfGiBYcmO%2FPick-Up%3Fnode-id%3D0-1%26p%3Df%26t%3DblWO4auB6BApRX8P-0",
+        alt: "Pick Up Figma file",
+      },
     ],
   },
   {
@@ -509,7 +589,13 @@ export const projects: Project[] = [
     category: "Art & Illustration",
     tags: ["Linolprint", "Acryl", "Watercolour"],
     link: "https://www.instagram.com/yllilpaintings/",
+    thumbnail: "/artworks.surrender.png",
     sections: [
+      {
+        type: "image",
+        src: "/artworks.surrender.png",
+        alt: "Artworks – Surrender painting",
+      },
       {
         type: "text",
         content: "A few of my artworks.",
