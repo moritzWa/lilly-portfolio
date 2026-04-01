@@ -26,19 +26,9 @@ const thumbnails = [
     thumbnail: '/images/work/wondernest/hero.png',
   },
   {
-    slug: 'cerasync',
-    title: 'CeraSync',
-    thumbnail: '/images/work/cerasync/web-1.png',
-  },
-  {
     slug: 'pickup',
     title: 'Pick Up',
     thumbnail: '/images/work/pickup/hero.png',
-  },
-  {
-    slug: 'meet',
-    title: 'Meet',
-    thumbnail: '/images/work/meet/hero.png',
   },
   {
     slug: 'ubuntu-groove',
