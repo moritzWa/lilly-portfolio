@@ -30,7 +30,9 @@ function ChevronSeparator() {
 }
 
 // Group projects by category
-const categories = projects.reduce<Record<string, typeof projects>>(
+const categoryOrder = ["Product Design", "App Design", "Brand & Development", "Art & Illustration"];
+
+const grouped = projects.reduce<Record<string, typeof projects>>(
   (acc, project) => {
     const cat = project.category;
     if (!acc[cat]) acc[cat] = [];
@@ -38,6 +40,12 @@ const categories = projects.reduce<Record<string, typeof projects>>(
     return acc;
   },
   {}
+);
+
+const categories = Object.fromEntries(
+  categoryOrder
+    .filter((cat) => grouped[cat])
+    .map((cat) => [cat, grouped[cat]])
 );
 
 export default function WorkPage() {

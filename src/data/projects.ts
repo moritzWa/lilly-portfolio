@@ -41,7 +41,7 @@ export const projects: Project[] = [
   {
     slug: "gls",
     title: "GLS - App Design, UI/UX, Web Design",
-    category: "App Design",
+    category: "Product Design",
     tags: ["App Design", "ID", "UI/UX", "Web design", "research"],
     link: "https://www.glsnxt.com/",
     thumbnail: "/images/work/gls/hero.png",
