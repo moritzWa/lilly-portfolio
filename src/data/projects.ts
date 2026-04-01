@@ -380,7 +380,7 @@ export const projects: Project[] = [
       },
       {
         type: "pdf-embed",
-        src: "https://wondernest.net/",
+        src: "https://wondernest-express.onrender.com/",
         alt: "Wondernest live website",
       },
       {
@@ -388,7 +388,7 @@ export const projects: Project[] = [
         title: "Wondernest",
         description:
           "Host, organize, and attend small in-person events, which focus on genuine connections, enhancing social lives in big cities",
-        url: "https://wondernest.net/",
+        url: "https://wondernest-express.onrender.com/",
         iconSrc: "/globe.svg",
       },
       { type: "heading", content: "Brand Book", level: 3 },
@@ -483,6 +483,130 @@ export const projects: Project[] = [
         type: "image",
         src: "/images/work/cerasync/poster-6.jpg",
         alt: "CeraSync poster 6",
+      },
+    ],
+  },
+  {
+    slug: "gls",
+    title: "GLS - App Design, UI/UX, Web Design",
+    category: "App Design",
+    tags: ["App Design", "ID", "UI/UX", "Web design", "research"],
+    link: "https://www.glsnxt.com/",
+    thumbnail: "/images/work/gls/hero.png",
+    sections: [
+      {
+        type: "image",
+        src: "/images/work/gls/hero.png",
+        alt: "GLS Map",
+      },
+      { type: "heading", content: "Project Overview", level: 3 },
+      { type: "hr" },
+      {
+        type: "text",
+        content:
+          "As part of GLS/NXT's mission to deliver a seamless and delightful parcel experience, I led the redesign and migration of the OOH Location Map from a fragmented legacy Joomla implementation to a unified, native GLS web module. This new map serves as the single source of truth for all OOH locations (ParcelShops and Lockers), aligning web and mobile experiences and enabling faster iteration, consistent branding, and improved usability.",
+      },
+      { type: "heading", content: "My Role & Process", level: 3 },
+      { type: "hr" },
+      {
+        type: "text",
+        content:
+          "User Research & Problem Framing: Collaborated with product, engineering, and support teams to understand pain points, user journeys, and business needs. Synthesized findings into actionable insights and design principles.",
+      },
+      {
+        type: "text",
+        content:
+          "Design System Integration: Leveraged and contributed to the GLS/NXT design system, ensuring reusable components, accessibility, and a single source of truth for UI patterns. Worked closely with developers to align Figma components and Storybook implementations, reducing duplication and improving maintainability.",
+      },
+      {
+        type: "text",
+        content:
+          "UX/UI Design: Designed an interactive map module featuring OOH pins with distinct icons for ParcelShops and Lockers, map controls (zoom, recenter, user location with permission fallback), search functionality, combined map + list results panel, filter panel with persistent state, and a rich location detail view with opening hours, directions, and a report-a-problem entry point.",
+      },
+      {
+        type: "text",
+        content:
+          "Collaboration & Handover: Maintained close communication with developers, using Figma overview screens and Storybook as living documentation. Ensured all edge cases and states were documented for smooth implementation and QA.",
+      },
+      {
+        type: "text",
+        content:
+          "Analytics & Validation: Defined tracking hooks for search, filter, location detail, and directions actions to measure success and inform future iterations.",
+      },
+      {
+        type: "image",
+        src: "/images/work/gls/desktop-overview.png",
+        alt: "GLS Map desktop overview",
+      },
+      {
+        type: "image-row",
+        images: [
+          { src: "/images/work/gls/map-default.png", alt: "Map default state" },
+          { src: "/images/work/gls/list-expanded.png", alt: "Parcelshop and locker list" },
+          { src: "/images/work/gls/locker-info.png", alt: "Locker detail with capacity" },
+        ],
+      },
+      { type: "heading", content: "Prototype", level: 3 },
+      { type: "hr" },
+      {
+        type: "video",
+        src: "/images/work/gls/prototype.mov",
+        alt: "GLS Map prototype recording",
+      },
+      {
+        type: "video",
+        src: "/images/work/gls/prototype-2.mov",
+        alt: "GLS Map screen recording",
+        small: true,
+      },
+      { type: "heading", content: "The Design", level: 3 },
+      { type: "hr" },
+      {
+        type: "link-card",
+        title: "GLS Map on Figma",
+        description: "View the full design in Figma",
+        url: "https://www.figma.com/design/D54vUmK2bO4lUF6VD0N14y/Map?node-id=1056-55193&t=rQPRwy28xot8SKLK-1",
+        iconSrc: "/globe.svg",
+      },
+    ],
+  },
+  {
+    slug: "ubuntu-groove",
+    title: "Ubuntu Groove - App Design",
+    category: "App Design",
+    tags: ["App Design", "Brand", "UI/UX"],
+    link: "https://www.figma.com/design/BzVMb2C9XwcF8BXVaa96Qn/Design-History?node-id=13-8499&t=Rlu1b9BBOm0pZluO-1",
+    thumbnail: "/images/work/ubuntu-groove/hero.png",
+    sections: [
+      {
+        type: "image",
+        src: "/images/work/ubuntu-groove/hero.png",
+        alt: "Ubuntu Groove hero",
+      },
+      { type: "heading", content: "Ubuntu Groove", level: 3 },
+      { type: "hr" },
+      {
+        type: "text",
+        content:
+          "Ubuntu Groove reimagines Apple Music as a vibrant, community-focused platform. Afrofuturist colors, bold typography, and integrated social features transform music discovery into a collaborative, culturally rich experience, shifting from individualism to collective creativity and celebration.",
+      },
+      { type: "heading", content: "App Design", level: 3 },
+      { type: "hr" },
+      {
+        type: "image-row",
+        images: [
+          { src: "/images/work/ubuntu-groove/explore.png", alt: "Explore screen" },
+          { src: "/images/work/ubuntu-groove/remix.png", alt: "Remix screen" },
+        ],
+      },
+      { type: "heading", content: "Figma", level: 3 },
+      { type: "hr" },
+      {
+        type: "link-card",
+        title: "Ubuntu Groove on Figma",
+        description: "View the full design in Figma",
+        url: "https://www.figma.com/design/BzVMb2C9XwcF8BXVaa96Qn/Design-History?node-id=13-8499&t=Rlu1b9BBOm0pZluO-1",
+        iconSrc: "/globe.svg",
       },
     ],
   },

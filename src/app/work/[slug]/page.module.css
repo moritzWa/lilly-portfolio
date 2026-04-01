@@ -142,6 +142,11 @@
   background: #000;
 }
 
+.mediaVideoSmall {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
 .pdfFrame {
   width: 96%;
   min-height: 320px;
@@ -227,7 +232,7 @@
 
 .imageRow {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 16px;
   margin-top: 24px;
 }
@@ -242,12 +247,8 @@
   margin-top: 0;
   border: none;
   width: 100%;
-  height: 140px;
+  height: auto;
   object-fit: contain;
-}
-
-.imageRow > :first-child img {
-  height: 170px;
 }
 
 .details {

@@ -67,7 +67,7 @@ function renderSection(section: ProjectSection, index: number) {
       return (
         <figure key={index} className={styles.mediaBlock}>
           <video
-            className={styles.mediaVideo}
+            className={`${styles.mediaVideo} ${section.small ? styles.mediaVideoSmall : ""}`}
             controls
             preload="metadata"
             poster={section.poster}

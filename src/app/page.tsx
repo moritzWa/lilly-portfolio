@@ -35,6 +35,16 @@ const thumbnails = [
     title: 'Meet',
     thumbnail: '/images/work/meet/hero.png',
   },
+  {
+    slug: 'gls',
+    title: 'GLS',
+    thumbnail: '/images/work/gls/hero.png',
+  },
+  {
+    slug: 'ubuntu-groove',
+    title: 'Ubuntu Groove',
+    thumbnail: '/images/work/ubuntu-groove/hero.png',
+  },
 ];
 
 export default function Home() {
