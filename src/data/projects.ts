@@ -10,13 +10,17 @@ export interface ProjectSection {
     | "pdf-embed"
     | "video"
     | "hr"
-    | "link-card";
+    | "link-card"
+    | "list"
+    | "html";
   content?: string;
   src?: string;
   alt?: string;
   poster?: string;
   small?: boolean;
   images?: { src: string; alt: string }[];
+  items?: string[];
+  ordered?: boolean;
   level?: 1 | 2 | 3;
   href?: string;
   summary?: string;
@@ -743,6 +747,79 @@ export const projects: Project[] = [
           { src: "/images/work/art/acryl.png", alt: "Acryl" },
         ],
       },
+    ],
+  },
+  {
+    slug: "design-ai",
+    title: "Design + AI",
+    category: "Blog",
+    tags: ["AI", "Design Systems", "Design Engineering"],
+    thumbnail: "/images/work/design-ai/hero.png",
+    sections: [
+      { type: "image", src: "/images/work/design-ai/hero.png", alt: "Design + AI" },
+      { type: "heading", level: 1, content: "Pair-Designing With AI: How I Actually Work as a Design Engineer" },
+      { type: "text", content: `I'm a designer maintaining a design system at scale. Over the past few months I've shifted most of my workflow to be AI-collaborative, not "AI generates designs for me," but a deeper, more architectural partnership.` },
+
+      { type: "heading", level: 2, content: "The shift" },
+      { type: "hr" },
+      { type: "text", content: "Design systems are mostly NOT about pixels. They're about consistency at scale: thousands of bindings, hundreds of components, dozens of token decisions that need to stay aligned. The kind of work that, done by hand, would take weeks and still have leaks." },
+      { type: "text", content: `Claude isn't great at pressing UI buttons, and that's not the point. It's great at querying every component in seconds, spotting inconsistencies, executing bulk rebinds, and migrating tokens with precision. So instead of asking it to "design a button," I ask it to do the work I'd never have the patience to do manually.` },
+
+      { type: "heading", level: 2, content: "My actual workflow" },
+      { type: "hr" },
+      { type: "html", content: `<p><strong>1. I notice something feels off.</strong> "Surface/action-subtle is invisible on white." "Why does the icon look darker than the text?"</p>` },
+      { type: "html", content: `<p><strong>2. I describe the issue in plain language.</strong> No pre-diagnosis. I describe what I'm seeing; Claude reverse-engineers the technical cause.</p>` },
+      { type: "html", content: `<p><strong>3. Claude inspects first, then proposes.</strong> Before changing anything, it queries contrast ratios, bindings, usage counts, then lays out 2–4 options with trade-offs.</p>` },
+      { type: "html", content: `<p><strong>4. I pick a direction.</strong> The decision stays mine. Claude is execution-rich; I know what the product needs.</p>` },
+      { type: "html", content: `<p><strong>5. Claude executes, and I verify.</strong> Bulk rebinds, mass renames, file-wide audits. Then I look at the actual file. Always.</p>` },
+
+      { type: "heading", level: 2, content: "Things I've learned" },
+      { type: "hr" },
+      { type: "html", content: `<p><strong>Ask before deleting.</strong> Standing instruction: "ask me before you delete or change something always." One rule, dozens of disasters prevented.</p>` },
+      { type: "html", content: `<p><strong>Be honest about the boundary.</strong> Claude can't load every font or click in the UI. We split the work: Claude preps (12 style shells with correct names + bindings); I do the manual flip.</p>` },
+      { type: "html", content: `<p><strong>Audit first.</strong> How many uses? What's the contrast ratio? What's the cascading effect? I used to change typography by feel; now I do it with usage data.</p>` },
+      { type: "html", content: `<p><strong>Surfacing invisible bugs.</strong> The AI's superpower:</p><ul><li>17 text styles named Medium that render as Regular</li><li>150 nodes with weight names that don't exist in the installed font</li><li>180 stale references to a deleted variable</li><li>26 styles with zero usage</li></ul>` },
+      { type: "html", content: `<p><strong>Don't delegate the why.</strong> "Should we have Light weight in a logistics UI?" Claude can report zero usage and what other systems do, but the call is mine.</p>` },
+
+      { type: "heading", level: 2, content: `What "design engineering" means to me now` },
+      { type: "hr" },
+      { type: "html", content: `<ul><li>I work at the <strong>variable layer</strong>, every text node binds to a variable, one collection, no pile of hex codes</li><li>Claude generates <strong>Code Connect mappings</strong>, <code>.figma.tsx</code> files ready for the uikit repo</li><li>Tokens Studio exports JSON; the build pipeline picks it up, handoff is almost trivial</li><li>Documentation lives in the file: Changelog, descriptions, Typography showcase. Claude writes the changelog from each session</li></ul>` },
+      { type: "html", content: `<p>The bottleneck isn't translating designs to code anymore. It's <strong>making good design decisions</strong>.</p>` },
+
+      { type: "heading", level: 2, content: "Honest about the limits" },
+      { type: "hr" },
+      { type: "html", content: `<p><strong>Claude can't:</strong> aesthetic judgment, product intuition, stakeholder negotiation, final QA in the product.</p>` },
+      { type: "html", content: `<p><strong>Claude does (and I won't do by hand again):</strong> file-wide audits (5,879 text nodes in seconds), bulk token migrations (12,000+ bindings), cross-file consistency checks, changelog writing, usage stats before pruning.</p>` },
+
+      { type: "heading", level: 2, content: "The mental model" },
+      { type: "hr" },
+      { type: "text", content: `Treat the AI like a very fast, very literal coworker who has your facts but not your taste, asks great questions if trained to, and should NOT be trusted with strategy. The unlock: "I don't know, let me ask Claude to inspect before I change it."` },
+
+      { type: "heading", level: 2, content: "Example: swapping our entire icon library" },
+      { type: "hr" },
+      { type: "html", content: `<p>~160 custom icons, inconsistent strokes and naming, engineers building a parallel set in code. I wanted Lucide, 1,500+ icons, consistent 2px strokes, importable via <code>lucide-react</code>. Weeks of work if anyone had found the time.</p>` },
+      { type: "html", content: `<ol><li><strong>Inventory</strong>, usage map in a minute: what's used, what's dead, what's duplicated</li><li><strong>Mapping table</strong>, Claude proposed Lucide equivalents (~75% correct first pass); I called the ambiguous ones</li><li><strong>Import</strong>, 1,460 Lucide icons, namespaced under <code>Lucide/</code>, one pass</li><li><strong>Mass swap</strong>, ~1,500 instance swaps across buttons, alerts, nav, forms</li><li><strong>Keep GLS-specific icons</strong>, parcelLocker, Last-Mile, brand logos, separate <code>GLS/</code> namespace</li><li><strong>Update icon-wrapper preferred values</strong>, usable icons in the dropdown, not 1,500 to scroll through</li><li><strong>Code Connect</strong>, Figma icons map to real <code>lucide-react</code> imports in Dev Mode</li></ol>` },
+      { type: "text", content: "One afternoon. By morning: 1,460 production-ready icons, code-importable, clean namespace separation. Three weeks by hand; one session with Claude." },
+
+      { type: "heading", level: 2, content: "Closing the loop: automating the broadcast" },
+      { type: "hr" },
+      { type: "text", content: "The work is one half. The other half is telling the team what changed." },
+      { type: "text", content: "For a long time that was the part that broke. I'd finish a token migration on a Wednesday afternoon and forget to write the changelog, or write it three days later when half the context had evaporated. Engineers using the DS would learn about a breaking token rename by hitting the broken build, not by reading a message." },
+      { type: "text", content: "This week I closed the loop. Now the same Claude session that does the work also publishes it:" },
+      { type: "html", content: `<ol><li>I say <code>publish DS update</code></li><li>Claude reads the session's task list, every audit, rebind, deletion, addition we did</li><li>It drafts a Slack message in the team's voice, headline, bulleted changes, who's affected, link to the Figma file</li><li>It drafts a row for the Figma Changelog page using the existing table format</li><li>I review both drafts in one turn</li><li>On "yes", Slack message posts to <code>#design-system-sync</code>, and the Changelog row appends to the Figma file</li></ol>` },
+      { type: "image-row", images: [
+        { src: "/images/work/design-ai/changelog.png", alt: "Figma Changelog" },
+        { src: "/images/work/design-ai/slack.png", alt: "Slack message" },
+      ]},
+      { type: "text", content: "The whole \"publish\" step takes 90 seconds. Before, it would either not happen at all, or take 20 minutes of context-switching to write up half a day later when I no longer remembered the details." },
+      { type: "text", content: "What this unlocked: I stopped batching announcements. Now every session that touches the DS publishes itself. The team's mental model of \"what's in the system today\" stays current because the broadcast cost dropped to near-zero." },
+      { type: "text", content: "This is the meta-move I'm most excited about. The first level of automation was getting Claude to do my bulk work. The second level is getting it to handle the workflow around the bulk work, the boring administrative bookkeeping that exists between \"thing is done\" and \"team knows about it.\"" },
+      { type: "text", content: "If you're a designer maintaining a system, this is the layer to automate next. The work isn't done until people know it's done." },
+
+      { type: "heading", level: 2, content: "The takeaway" },
+      { type: "hr" },
+      { type: "text", content: "I still draw, pixel-push, and argue about CSS. But the rote migration work, changelog writing, and typography audits are done by the time I've finished my coffee." },
+      { type: "text", content: `If you're a designer thinking "I'd love to do that audit but it'd take three weeks", that's the work to bring to AI first. You'll get it done by Tuesday.` },
     ],
   },
   {

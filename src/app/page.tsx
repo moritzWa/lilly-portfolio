@@ -193,6 +193,17 @@ export default function Home() {
             </div>
             <div className={styles.eyebrow} />
             <div className={styles.grid}>
+              <Link className={styles.entry} href="/work/design-ai">
+                <div className={styles.thumbnail}>
+                  <Image
+                    src="/images/work/design-ai/hero.png"
+                    alt="Design + AI"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 800px) 100vw, 33vw"
+                  />
+                </div>
+              </Link>
               <a className={styles.entry} href="https://www.linkedin.com/posts/lilly-wallawitsch_we-the-xdesign-club-just-had-one-single-ugcPost-7453097590293716993-RW9r/" target="_blank" rel="noopener noreferrer">
                 <div className={styles.thumbnail}>
                   <Image

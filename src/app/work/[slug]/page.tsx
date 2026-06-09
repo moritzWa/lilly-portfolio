@@ -136,6 +136,18 @@ function renderSection(section: ProjectSection, index: number) {
           {section.alt && <figcaption>{section.alt}</figcaption>}
         </figure>
       );
+    case "html":
+      return (
+        <div key={index} className={styles.richText} dangerouslySetInnerHTML={{ __html: section.content! }} />
+      );
+    case "list": {
+      const Tag = section.ordered ? "ol" : "ul";
+      return (
+        <Tag key={index} className={styles.contentList}>
+          {section.items?.map((item, i) => <li key={i}>{item}</li>)}
+        </Tag>
+      );
+    }
     case "link-card":
       return (
         <a
