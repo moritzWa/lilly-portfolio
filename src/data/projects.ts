@@ -51,6 +51,10 @@ export const projects: Project[] = [
         src: "/images/work/gls/hero.png",
         alt: "GLS Map",
       },
+      {
+        type: "video",
+        src: "/images/work/gls/screen-recording.mov",
+      },
       { type: "heading", content: "Project Overview", level: 3 },
       { type: "hr" },
       {
@@ -738,6 +742,34 @@ export const projects: Project[] = [
           { src: "/images/work/art/watercolour-pen.png", alt: "Watercolour and pen" },
           { src: "/images/work/art/acryl.png", alt: "Acryl" },
         ],
+      },
+    ],
+  },
+  {
+    slug: "xdesign-hackathon",
+    title: "XDesign Hackathon",
+    category: "Hackathon",
+    tags: ["UX/UI", "Hackathon"],
+    thumbnail: "/images/work/xdesign-hackathon/hero.png",
+    sections: [
+      {
+        type: "image",
+        src: "/images/work/xdesign-hackathon/hero.png",
+        alt: "XDesign Hackathon",
+      },
+    ],
+  },
+  {
+    slug: "aurea-hacker-house",
+    title: "Aurea Hacker House",
+    category: "Hackathon",
+    tags: ["UX/UI", "Hackathon"],
+    thumbnail: "/images/work/aurea-hacker-house/hero.png",
+    sections: [
+      {
+        type: "image",
+        src: "/images/work/aurea-hacker-house/hero.png",
+        alt: "Aurea Hacker House",
       },
     ],
   },

@@ -65,7 +65,14 @@ export default function Home() {
               .
             </p>
             <p>
-              Female in Tech Scholarship holder at{' '}
+              <a
+                href="https://www.linkedin.com/posts/lilly-wallawitsch_we-the-xdesign-club-just-had-one-single-ugcPost-7453097590293716993-RW9r/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                XDesign Club
+              </a>{' '}
+              Co-Founder, Female in Tech Scholarship holder at{' '}
               <a
                 href="https://www.t-mobile.com"
                 target="_blank"
@@ -167,43 +174,34 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.posts}>
-            <div className={styles.postsHeading}>
-              <h1>Library</h1>
+          <div className={styles.work}>
+            <div className={styles.sectionHeading}>
+              <h1>Projects</h1>
             </div>
-            <div className={styles.container}>
-              <div className={styles.rowDisabled}>
-                <div className={styles.colA}>
-                  <div>
-                    <h3 className={styles.rowTitle}>
-                      Understanding User Research Methods
-                    </h3>
-                  </div>
-                  <div className={styles.draft}>
-                    <p className={styles.draftLabel}>Draft</p>
-                  </div>
+            <div className={styles.eyebrow} />
+            <div className={styles.grid}>
+              <a className={styles.entry} href="https://www.linkedin.com/posts/lilly-wallawitsch_we-the-xdesign-club-just-had-one-single-ugcPost-7453097590293716993-RW9r/" target="_blank" rel="noopener noreferrer">
+                <div className={styles.thumbnail}>
+                  <Image
+                    src="/images/work/xdesign-hackathon/hero.png"
+                    alt="XDesign Hackathon"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 800px) 100vw, 33vw"
+                  />
                 </div>
-                <div className={styles.colB}>Blog</div>
-                <div className={styles.colC}>
-                  <time>2025</time>
+              </a>
+              <a className={styles.entry} href="https://joinaurea.com/" target="_blank" rel="noopener noreferrer">
+                <div className={styles.thumbnail}>
+                  <Image
+                    src="/images/work/aurea-hacker-house/hero.png"
+                    alt="Aurea Hacker House"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 800px) 100vw, 33vw"
+                  />
                 </div>
-              </div>
-              <div className={styles.rowDisabled}>
-                <div className={styles.colA}>
-                  <div>
-                    <h3 className={styles.rowTitle}>
-                      Design Systems in Practice
-                    </h3>
-                  </div>
-                  <div className={styles.draft}>
-                    <p className={styles.draftLabel}>Draft</p>
-                  </div>
-                </div>
-                <div className={styles.colB}>Blog</div>
-                <div className={styles.colC}>
-                  <time>2025</time>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </section>
