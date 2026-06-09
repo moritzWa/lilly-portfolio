@@ -45,16 +45,16 @@ export default function Home() {
           <div className={styles.about}>
             <h1>Lilly Wallawitsch</h1>
             <p>
-              Hey I&apos;m Lilly, a UX/UI Designer studying Interaction Design
-              at{' '}
+              Hey, I&apos;m Lilly, a UX/UI Designer turning into a Design
+              Engineer, currently studying Interaction Design at{' '}
               <a
                 href="https://code.berlin/en/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 CODE University
-              </a>
-              . Currently working at{' '}
+              </a>{' '}
+              and working at{' '}
               <a
                 href="https://www.glsnxt.com"
                 target="_blank"
@@ -65,6 +65,13 @@ export default function Home() {
               .
             </p>
             <p>
+              I&apos;m obsessed with using AI as real leverage: automating
+              design workflows, co‑creating with Claude to clean up and
+              restructure existing design systems, and keeping Figma and
+              Storybook in sync.
+            </p>
+            <p>
+              I co-founded the{' '}
               <a
                 href="https://www.linkedin.com/posts/lilly-wallawitsch_we-the-xdesign-club-just-had-one-single-ugcPost-7453097590293716993-RW9r/"
                 target="_blank"
@@ -72,15 +79,23 @@ export default function Home() {
               >
                 XDesign Club
               </a>{' '}
-              Co-Founder, Female in Tech Scholarship holder at{' '}
+              and am a Fem@le in Tech scholarship holder at{' '}
               <a
                 href="https://www.t-mobile.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                T-Mobile
+                T‑Mobile
               </a>
-              . Previously designed for{' '}
+              . Previously, I designed complex, process-heavy products for{' '}
+              <a
+                href="https://www.keeper.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Keeper
+              </a>{' '}
+              (AI matchmaking),{' '}
               <a
                 href="https://www.plymouthstreet.com/"
                 target="_blank"
@@ -88,26 +103,18 @@ export default function Home() {
               >
                 Plymouth
               </a>{' '}
-              and{' '}
+              (US visa applications) and{' '}
               <a
                 href="https://www.buena.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Buena
-              </a>
-              .
+              </a>{' '}
+              (property management).
             </p>
             <p>
               Reach me on{' '}
-              <a
-                href="https://x.com/WallawitschL"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                X
-              </a>
-              ,{' '}
               <a
                 href="https://www.linkedin.com/in/lilly-wallawitsch"
                 target="_blank"
@@ -117,15 +124,21 @@ export default function Home() {
               </a>
               ,{' '}
               <a
+                href="https://x.com/WallawitschL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                X
+              </a>
+              ,{' '}
+              <a
                 href="https://github.com/lillywallawitsch"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 GitHub
               </a>
-              , or via{' '}
-              <EmailLink />
-              . Download my{' '}
+              , or via <EmailLink />. You can also download my{' '}
               <a
                 href="https://drive.google.com/file/d/1InsBV12tYTRTt2FCFzI9INUCzxS-c0Ri/view?usp=sharing"
                 target="_blank"
