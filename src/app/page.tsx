@@ -6,6 +6,11 @@ import EmailLink from '@/components/EmailLink';
 
 const thumbnails = [
   {
+    slug: 'locker-portal',
+    title: 'Locker Portal',
+    thumbnail: '/images/work/locker-portal/hero.png',
+  },
+  {
     slug: 'gls',
     title: 'GLS',
     thumbnail: '/images/work/gls/hero.png',
@@ -29,11 +34,6 @@ const thumbnails = [
     slug: 'pickup',
     title: 'Pick Up',
     thumbnail: '/images/work/pickup/hero.png',
-  },
-  {
-    slug: 'ubuntu-groove',
-    title: 'Ubuntu Groove',
-    thumbnail: '/images/work/ubuntu-groove/hero.png',
   },
 ];
 

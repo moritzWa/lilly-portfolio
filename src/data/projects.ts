@@ -55,6 +55,7 @@ export const projects: Project[] = [
         src: "/images/work/gls/hero.png",
         alt: "GLS Map",
       },
+      { type: "heading", content: "Map", level: 3 },
       {
         type: "video",
         src: "/images/work/gls/screen-recording.mov",
@@ -64,62 +65,51 @@ export const projects: Project[] = [
       {
         type: "text",
         content:
-          "As part of GLS/NXT's mission to deliver a seamless and delightful parcel experience, I led the redesign and migration of the OOH Location Map from a fragmented legacy Joomla implementation to a unified, native GLS web module. This new map serves as the single source of truth for all OOH locations (ParcelShops and Lockers), aligning web and mobile experiences and enabling faster iteration, consistent branding, and improved usability.",
+          "I led the redesign of the OOH Location Map, migrating from a legacy Joomla implementation to a unified native GLS web module, serving as the single source of truth for all ParcelShop and Locker locations across web and mobile.",
       },
       { type: "heading", content: "My Role & Process", level: 3 },
       { type: "hr" },
       {
         type: "text",
         content:
-          "User Research & Problem Framing: Collaborated with product, engineering, and support teams to understand pain points, user journeys, and business needs. Synthesized findings into actionable insights and design principles.",
+          "User Research & Problem Framing: Conducted competitor research across leading map products to identify best practices for OOH features, pin clustering, filter UX, and mobile-first map controls.",
       },
       {
         type: "text",
         content:
-          "Design System Integration: Leveraged and contributed to the GLS/NXT design system, ensuring reusable components, accessibility, and a single source of truth for UI patterns. Worked closely with developers to align Figma components and Storybook implementations, reducing duplication and improving maintainability.",
+          "Design System Integration & AI-Readiness: While designing the map, I restructured the GLS/NXT design system to be AI-ready, cleaning up token naming, rebuilding components with clear variant structures, and aligning Figma 1:1 with Storybook. This made the system legible to Claude, letting me co-create within the DS constraints and move significantly faster.",
       },
       {
         type: "text",
         content:
-          "UX/UI Design: Designed an interactive map module featuring OOH pins with distinct icons for ParcelShops and Lockers, map controls (zoom, recenter, user location with permission fallback), search functionality, combined map + list results panel, filter panel with persistent state, and a rich location detail view with opening hours, directions, and a report-a-problem entry point.",
+          "UX/UI Design: Designed the full map module, including OOH pins for ParcelShops and Lockers, map controls, search, a combined map + list panel, persistent filter state, and a location detail view with opening hours, directions, and a report-a-problem entry point.",
       },
       {
         type: "text",
         content:
-          "Collaboration & Handover: Maintained close communication with developers, using Figma overview screens and Storybook as living documentation. Ensured all edge cases and states were documented for smooth implementation and QA.",
+          "Collaboration & Handover: Worked closely with developers using Figma and Storybook as living documentation, with all edge cases and states covered for QA.",
       },
       {
         type: "text",
         content:
-          "Analytics & Validation: Defined tracking hooks for search, filter, location detail, and directions actions to measure success and inform future iterations.",
+          "Analytics & Validation: Defined tracking hooks for search, filter, and location detail actions to measure success and inform iterations.",
       },
+      { type: "heading", content: "Desktop", level: 3 },
       {
         type: "image",
         src: "/images/work/gls/desktop-overview.png",
         alt: "GLS Map desktop overview",
       },
+      { type: "heading", content: "Mobile", level: 3 },
       {
         type: "image-row",
         images: [
-          { src: "/images/work/gls/map-default.png", alt: "Map default state" },
-          { src: "/images/work/gls/list-expanded.png", alt: "Parcelshop and locker list" },
-          { src: "/images/work/gls/locker-info.png", alt: "Locker detail with capacity" },
+          { src: "/images/work/gls/map-app-1.png", alt: "Map default state" },
+          { src: "/images/work/gls/map-app-2.png", alt: "Parcelshop and locker list" },
+          { src: "/images/work/gls/map-app-3.png", alt: "Locker detail with capacity" },
         ],
       },
-      { type: "heading", content: "Prototype", level: 3 },
-      { type: "hr" },
-      {
-        type: "video",
-        src: "/images/work/gls/prototype.mov",
-        alt: "GLS Map prototype recording",
-      },
-      {
-        type: "video",
-        src: "/images/work/gls/prototype-2.mov",
-        alt: "GLS Map screen recording",
-        small: true,
-      },
-      { type: "heading", content: "The Design", level: 3 },
+{ type: "heading", content: "The Design", level: 3 },
       { type: "hr" },
       {
         type: "link-card",
@@ -128,6 +118,59 @@ export const projects: Project[] = [
         url: "https://www.figma.com/design/D54vUmK2bO4lUF6VD0N14y/Map?node-id=1056-55193&t=rQPRwy28xot8SKLK-1",
         iconSrc: "/globe.svg",
       },
+    ],
+  },
+  {
+    slug: "locker-portal",
+    title: "Locker Portal - Agentic AI Integration",
+    category: "Product Design",
+    tags: ["AI", "UX/UI", "GLS/NXT"],
+    thumbnail: "/images/work/locker-portal/hero.png",
+    sections: [
+      {
+        type: "image",
+        src: "/images/work/locker-portal/hero.png",
+        alt: "Locker Portal Agentic AI Integration",
+      },
+      { type: "heading", content: "Agentic AI Integration", level: 3 },
+      { type: "hr" },
+      {
+        type: "video",
+        src: "/images/work/locker-portal/help-feature.mov",
+        alt: "Help feature demo",
+      },
+      { type: "heading", content: "Prototyping a Contextual Help Feature with an AI Agent", level: 1 },
+      { type: "hr" },
+      { type: "heading", content: "The Problem", level: 2 },
+      { type: "text", content: "The GLS Locker Portal is used by six different user archetypes, managers, operations specialists, IT support, rollout coordinators. Everyone shares the same interface but has completely different reasons for being there." },
+      { type: "text", content: "The common thread: everyone eventually hits a portal state they don't understand and has to open another tool, call a colleague, or escalate to the wrong team." },
+      { type: "hr" },
+      { type: "heading", content: "The Research", level: 2 },
+      { type: "text", content: "Before touching any UI, I mapped each archetype to the exact moments they'd reach for Help and what they'd need. The research clustered into six use cases:" },
+      {
+        type: "list",
+        items: [
+          "Status interpretation, every archetype needed it, so it came first",
+          "Parcel and compartment resolution, depot workers are physically blocked in real time",
+          "Escalation routing, who do I call, and what do I tell them?",
+          "Cross-system discrepancy diagnosis, portal shows X, other tool shows Y",
+          "Activation and go-live verification, high stakes, narrow archetype",
+          "Documentation and reporting, structured summaries to paste into emails or Jira",
+        ],
+      },
+      { type: "hr" },
+      { type: "heading", content: "The Design Decisions", level: 2 },
+      { type: "html", content: "<p><strong>Floating action button, not an inline button.</strong> Stays out of the way until needed, doesn't compete with primary content.</p>" },
+      { type: "html", content: "<p><strong>Permanent sidebar on detail pages.</strong> Users need to read locker data and ask questions at the same time. A sidebar that switches between detail cards and chat makes that possible without losing context.</p>" },
+      { type: "html", content: "<p><strong>Animated gradient border.</strong> The button stays the primary brand blue, but a subtle animated ring signals that this is AI-powered, distinct from every other action on the page without being distracting.</p>" },
+      { type: "html", content: "<p><strong>Persistent state across navigation.</strong> If Help is open on the overview and you click into a detail, it stays open. If you arrive at a detail directly, it doesn't auto-open.</p>" },
+      { type: "hr" },
+      { type: "heading", content: "The Process", level: 2 },
+      { type: "text", content: "Instead of static mockups, I prototyped directly in the real React codebase using Claude as my implementation partner. Every design decision was immediately testable in a real browser, on real data, with the actual design system." },
+      { type: "text", content: "What changed wasn't just speed. Issues that normally surface in developer handoff, like the FAB covering the pagination, showed up immediately and got fixed on the spot. Design and iteration happened in the same loop." },
+      { type: "hr" },
+      { type: "heading", content: "Where It Landed", level: 2 },
+      { type: "text", content: "The prototype is live and deployed. Responses are rule-based for now, but the architecture and use-case mapping are in place for when there's a real model behind it." },
     ],
   },
   {
@@ -758,12 +801,12 @@ export const projects: Project[] = [
     sections: [
       { type: "image", src: "/images/work/design-ai/hero.png", alt: "Design + AI" },
       { type: "heading", level: 1, content: "Pair-Designing With AI: How I Actually Work as a Design Engineer" },
-      { type: "text", content: `I'm a designer maintaining a design system at scale. Over the past few months I've shifted most of my workflow to be AI-collaborative, not "AI generates designs for me," but a deeper, more architectural partnership.` },
+      { type: "text", content: `I'm a designer maintaining a design system at scale. Over the past few months I've shifted most of my workflow to be AI-collaborative, across both the maintenance work and the actual designing of new features.` },
 
       { type: "heading", level: 2, content: "The shift" },
       { type: "hr" },
       { type: "text", content: "Design systems are mostly NOT about pixels. They're about consistency at scale: thousands of bindings, hundreds of components, dozens of token decisions that need to stay aligned. The kind of work that, done by hand, would take weeks and still have leaks." },
-      { type: "text", content: `Claude isn't great at creating new components or designs from scratch, and that's not the point. It's great at querying every component in seconds, spotting inconsistencies, executing bulk rebinds, and migrating tokens with precision. So instead of asking it to "design a button," I ask it to do the work I'd never have the patience to do manually.` },
+      { type: "text", content: `Claude isn't a substitute for taste, it can't tell me if a layout feels right or if a flow makes product sense. What it can do is reason over the design system I've already built. With access to the tokens, components, and production codebase via Claude Code, it can propose new feature designs that use what already exists. And it can do the maintenance work I'd never have the patience to do manually: querying every component, spotting inconsistencies, executing bulk rebinds, migrating tokens.` },
 
       { type: "heading", level: 2, content: "My actual workflow" },
       { type: "hr" },
@@ -787,18 +830,24 @@ export const projects: Project[] = [
 
       { type: "heading", level: 2, content: "Honest about the limits" },
       { type: "hr" },
-      { type: "html", content: `<p><strong>Claude can't:</strong> aesthetic judgment, product intuition, stakeholder negotiation, final QA in the product.</p>` },
+      { type: "html", content: `<p><strong>Claude alone can't:</strong> decide if a design feels right, sense product nuance, negotiate with stakeholders, sign off on the final shipped experience.</p>` },
       { type: "html", content: `<p><strong>Claude does (and I won't do by hand again):</strong> file-wide audits (5,879 text nodes in seconds), bulk token migrations (12,000+ bindings), cross-file consistency checks, changelog writing, usage stats before pruning.</p>` },
 
       { type: "heading", level: 2, content: "The mental model" },
       { type: "hr" },
-      { type: "text", content: `Treat the AI like a very fast, very literal coworker who has your facts but not your taste, asks great questions if trained to, and should NOT be trusted with strategy. The unlock: "I don't know, let me ask Claude to inspect before I change it."` },
+      { type: "text", content: `Treat the AI like a very fast coworker who has your facts and a deep memory of your system, but doesn't make the final aesthetic or strategic calls. It asks great questions if trained to, executes precisely, and proposes well, but the curating and the strategy stay with you. The unlock: "I don't know, let me ask Claude to inspect before I change it."` },
 
       { type: "heading", level: 2, content: "Example: swapping our entire icon library" },
       { type: "hr" },
       { type: "html", content: `<p>~160 custom icons, inconsistent strokes and naming, engineers building a parallel set in code. I wanted Lucide, 1,500+ icons, consistent 2px strokes, importable via <code>lucide-react</code>. Weeks of work if anyone had found the time.</p>` },
       { type: "html", content: `<ol><li><strong>Inventory</strong>, usage map in a minute: what's used, what's dead, what's duplicated</li><li><strong>Mapping table</strong>, Claude proposed Lucide equivalents (~75% correct first pass); I called the ambiguous ones</li><li><strong>Import</strong>, 1,460 Lucide icons, namespaced under <code>Lucide/</code>, one pass</li><li><strong>Mass swap</strong>, ~1,500 instance swaps across buttons, alerts, nav, forms</li><li><strong>Keep GLS-specific icons</strong>, parcelLocker, Last-Mile, brand logos, separate <code>GLS/</code> namespace</li><li><strong>Update icon-wrapper preferred values</strong>, usable icons in the dropdown, not 1,500 to scroll through</li><li><strong>Code Connect</strong>, Figma icons map to real <code>lucide-react</code> imports in Dev Mode</li></ol>` },
       { type: "text", content: "One afternoon. By morning: 1,460 production-ready icons, code-importable, clean namespace separation. Three weeks by hand; one session with Claude." },
+
+      { type: "heading", level: 2, content: "Example: designing a new feature with Claude Code" },
+      { type: "hr" },
+      { type: "text", content: `I recently designed an entire new feature without doing the from-scratch sketch-and-iterate dance. Claude Code had access to the @gls-nxt/uikit repo, the Figma file, the Storybook, and every existing pattern. I described the user need, the constraints, and the surfaces involved. Claude proposed a layout that used existing components in expected ways, flagged where I'd need a new variant, and laid out the screens.` },
+      { type: "text", content: `I edited the proposal, moved things around, killed a panel that felt redundant, swapped a Tooltip for a Popover. But the bulk of "what does this look like in our system?" was already done.` },
+      { type: "text", content: `This is a different kind of design work than the bulk-migration stuff. Not "AI generates designs for me", more like "AI proposes a first pass using the system I've already built, and I edit from there." Faster than a blank canvas. I'm still the curator; the system itself does most of the constraining.` },
 
       { type: "heading", level: 2, content: "Closing the loop: automating the broadcast" },
       { type: "hr" },
