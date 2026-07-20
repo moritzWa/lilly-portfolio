@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import { projects as projectData } from '@/data/projects';
 import EmailLink from '@/components/EmailLink';
+import CodeRain from '@/components/CodeRain';
 
 const thumbnails = [
   {
@@ -40,10 +41,11 @@ const thumbnails = [
 export default function Home() {
   return (
     <main>
+      <CodeRain />
       <div className={styles.layout}>
         <div className={styles.header}>
           <div className={styles.about}>
-            <h1>Lilly Wallawitsch</h1>
+            <h1>Lilly Wallawitsch {"ฅ^>⩊<^ ฅ"}</h1>
             <p>
               Hey, I&apos;m Lilly, a UX/UI Designer turning into a Design
               Engineer, currently studying Interaction Design at{' '}
@@ -79,23 +81,16 @@ export default function Home() {
               >
                 XDesign Club
               </a>{' '}
-              and am a Fem@le in Tech scholarship holder at{' '}
+              where we organised a 300 applicant Design Hackathon and I am
+              a holder of the Female in Tech scholarship program by{' '}
               <a
-                href="https://www.t-mobile.com"
+                href="https://www.t-mobile.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 T‑Mobile
               </a>
               . Previously, I designed complex, process-heavy products for{' '}
-              <a
-                href="https://www.keeper.ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Keeper
-              </a>{' '}
-              (AI matchmaking),{' '}
               <a
                 href="https://www.plymouthstreet.com/"
                 target="_blank"
