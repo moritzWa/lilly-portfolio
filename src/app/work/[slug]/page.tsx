@@ -131,6 +131,7 @@ function renderSection(section: ProjectSection, index: number) {
           <iframe
             src={section.src?.startsWith("/") ? `${section.src}#view=FitH` : section.src}
             title={section.alt || "PDF document"}
+            loading="lazy"
             className={section.src?.startsWith("/") ? `${styles.pdfFrame} ${styles.pdfFrameDoc}` : styles.pdfFrame}
           />
           {section.alt && <figcaption>{section.alt}</figcaption>}

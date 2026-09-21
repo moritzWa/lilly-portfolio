@@ -58,7 +58,7 @@ export const projects: Project[] = [
       { type: "heading", content: "Map", level: 3 },
       {
         type: "video",
-        src: "/images/work/gls/screen-recording.mov",
+        src: "/images/work/gls/screen-recording.mp4",
       },
       { type: "heading", content: "Project Overview", level: 3 },
       { type: "hr" },
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       { type: "hr" },
       {
         type: "video",
-        src: "/images/work/locker-portal/help-feature.mov",
+        src: "/images/work/locker-portal/help-feature.mp4",
         alt: "Help feature demo",
       },
       { type: "heading", content: "Prototyping a Contextual Help Feature with an AI Agent", level: 1 },
@@ -450,7 +450,7 @@ export const projects: Project[] = [
       },
       {
         type: "video",
-        src: "/Screen_Recording_2025-02-18_at_14.20.26.mov",
+        src: "/Screen_Recording_2025-02-18_at_14.20.26.mp4",
         alt: "Owners Meeting (ETV) flow screen recording",
       },
       {
