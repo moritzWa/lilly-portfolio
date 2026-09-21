@@ -697,13 +697,8 @@ export const projects: Project[] = [
         src: "/Meet.Lilly_Wallawitsch.pdf",
         alt: "Meet – Competitor Research and Process",
       },
-      { type: "heading", content: "Consumer Psychology adapted on Meet", level: 3 },
-      { type: "hr" },
-      {
-        type: "pdf-embed",
-        src: "/PM_11 Cosumer Psychology-Lilly Wallawitsch.pdf",
-        alt: "Consumer Psychology adapted on Meet - PDF",
-      },
+      // Consumer Psychology PDF hidden: the committed file is corrupted (renders blank).
+      // Re-add once the original PDF is re-uploaded.
     ],
   },
   {

@@ -129,9 +129,9 @@ function renderSection(section: ProjectSection, index: number) {
       return (
         <figure key={index} className={styles.mediaBlock}>
           <iframe
-            src={section.src}
-          title={section.alt || "PDF document"}
-            className={styles.pdfFrame}
+            src={section.src?.startsWith("/") ? `${section.src}#view=FitH` : section.src}
+            title={section.alt || "PDF document"}
+            className={section.src?.startsWith("/") ? `${styles.pdfFrame} ${styles.pdfFrameDoc}` : styles.pdfFrame}
           />
           {section.alt && <figcaption>{section.alt}</figcaption>}
         </figure>

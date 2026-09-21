@@ -150,12 +150,19 @@
 
 .pdfFrame {
   width: 96%;
-  min-height: 320px;
+  height: 70vh;
+  min-height: 420px;
   border-radius: 8px;
   border: 1px solid var(--border-primary);
   background: white;
   display: block;
   margin: 0 auto;
+}
+
+/* Local PDFs: one full page tall (A4 ratio) instead of a short strip */
+.pdfFrameDoc {
+  height: auto;
+  aspect-ratio: 1 / 1.42;
 }
 
 .linkCard {
